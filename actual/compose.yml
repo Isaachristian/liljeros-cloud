@@ -3,7 +3,7 @@ services:
     container_name: actual
     image: docker.io/actualbudget/actual-server:latest
     volumes:
-      - /opt/data:/data
+      - /opt/liljeros-cloud/actual/data:/data
     healthcheck:
       test: ["CMD-SHELL", "node src/scripts/health-check.js"]
       interval: 60s
