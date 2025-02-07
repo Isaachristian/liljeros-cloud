@@ -1,8 +1,27 @@
 services:
+  # Caddy
   caddy:
     extends:
       file: ./caddy/compose.yml
       service: caddy
+  
+  # Seafile
+  db:
+    extends:
+      file: ./seafile/compose.yml
+      service: db
+  memcached:
+    extends:
+      file: ./seafile/compose.yml
+      service: memcached
+  elasticsearch:
+    extends:
+      file: ./seafile/compose.yml
+      service: elasticsearch
+  seafile:
+    extends:
+      file: ./seafile/compose.yml
+      service: seafile
 
 networks:
   proxy:
