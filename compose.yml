@@ -1,0 +1,14 @@
+services:
+  caddy:
+    extends:
+      file: ./caddy/compose.yml
+      service: caddy
+
+networks:
+  proxy:
+    name: caddy_network
+    driver: bridge
+
+volumes:
+  caddy_data:
+  caddy_config:
