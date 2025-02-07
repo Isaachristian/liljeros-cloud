@@ -1,3 +1,7 @@
 seafile.liljeros.cloud {
     reverse_proxy seafile:80
 }
+
+actual.liljeros.cloud {
+    reverse_proxy actual:5006
+}

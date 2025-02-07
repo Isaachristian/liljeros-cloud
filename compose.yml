@@ -23,6 +23,12 @@ services:
       file: ./seafile/compose.yml
       service: seafile
 
+  # actual
+  actual:
+    extends:
+      file: ./actual/compose.yml
+      service: actual_server
+
 networks:
   proxy:
     name: caddy_network
