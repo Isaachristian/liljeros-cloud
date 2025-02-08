@@ -29,10 +29,18 @@ services:
       file: ./actual/compose.yml
       service: actual_server
 
+  # vaultwarden
+  vaultwarden:
+    extends:
+      file: ./vaultwarden/compose.yml
+      service: vaultwarden
+
+
 networks:
   proxy:
     name: caddy_network
     driver: bridge
+
 
 volumes:
   caddy_data:

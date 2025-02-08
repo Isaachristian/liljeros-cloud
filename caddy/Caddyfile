@@ -1,7 +1,11 @@
 seafile.liljeros.cloud {
-    reverse_proxy seafile:80
+  reverse_proxy seafile:80
 }
 
 actual.liljeros.cloud {
-    reverse_proxy actual:5006
+  reverse_proxy actual:5006
+}
+
+vw.liljeros.cloud {
+  reverse_proxy vaultwarden:80
 }
