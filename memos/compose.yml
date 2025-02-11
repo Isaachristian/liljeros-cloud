@@ -1,0 +1,14 @@
+services:
+  memos:
+    image: neosmemo/memos:stable
+    container_name: memos
+    restart: unless-stopped
+    volumes:
+      - ./data/:/var/opt/memos
+    expose: [5230/tcp]
+    networks:
+      - proxy
+      
+networks:
+  proxy:
+    external: true

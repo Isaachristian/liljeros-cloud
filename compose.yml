@@ -40,6 +40,12 @@ services:
     extends:
       file: ./livesync/compose.yml
       service: livesync
+      
+  # memos
+  memos:
+    extends:
+      file: ./memos/compose.yml
+      service: memos
 
 
 networks:

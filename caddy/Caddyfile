@@ -10,6 +10,6 @@ vw.liljeros.cloud {
   reverse_proxy vaultwarden:80
 }
 
-# livesync.liljeros.cloud {
-#   reverse_proxy livesync:5984
-# }
+memos.liljeros.cloud {
+  reverse_proxy memos:5230
+}
