@@ -35,6 +35,12 @@ services:
       file: ./vaultwarden/compose.yml
       service: vaultwarden
 
+  # livesync
+  livesync:
+    extends:
+      file: ./livesync/compose.yml
+      service: livesync
+
 
 networks:
   proxy:

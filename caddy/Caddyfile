@@ -9,3 +9,7 @@ actual.liljeros.cloud {
 vw.liljeros.cloud {
   reverse_proxy vaultwarden:80
 }
+
+# livesync.liljeros.cloud {
+#   reverse_proxy livesync:5984
+# }

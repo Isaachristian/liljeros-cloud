@@ -1,0 +1,20 @@
+services:
+  livesync:
+    container_name: livesync
+    image: couchdb:3.3.3
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+      - COUCHDB_USER=obsidian_user 
+      - COUCHDB_PASSWORD=${COUCHDB_PASSWORD:?Add password for couchdb} 
+    volumes:
+      - ./data/data:/opt/couchdb/data
+      - ./data/etc/local.d:/opt/couchdb/etc/local.d
+    restart: unless-stopped
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
